@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google Search Engine Optimization (SEO) Tags -->
+    <title>Lujay Store | Modern Curated Lifestyle & Essentials</title>
+    <meta name="description" content="Welcome to Lujay Store. Discover our premium collection of curated lifestyle products, sleek essentials, and modern designs tailored for everyday elegance.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.lujay.store">
+    
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="Lujay Store | Modern Curated Lifestyle & Essentials">
+    <meta property="og:description" content="Discover our premium collection of curated lifestyle products, sleek essentials, and modern designs tailored for everyday elegance.">
+    <meta property="og:url" content="https://www.lujay.store">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.lujay.store/og-image.jpg">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lujay Store | Modern Curated Lifestyle & Essentials">
+    <meta name="twitter:description" content="Discover our premium collection of curated lifestyle products">
+    <meta name="twitter:image" content="https://www.lujay.store/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <!-- JSON-LD Structured Data for E-commerce -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebStore",
+      "name": "Lujay Store",
+      "url": "https://www.lujay.store",
+      "description": "Premium collection of curated lifestyle products, sleek essentials, and modern designs",
+      "telephone": "+1-800-LUJAY-00",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Modern Street",
+        "addressLocality": "New York",
+        "addressRegion": "NY",
+        "postalCode": "10001",
+        "addressCountry": "US"
+      }
+    }
+    </script>
+
+    <style>
+        /* Modern CSS Reset & Color Palette */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --bg-color: #fcfbfa;
+            --text-main: #2d2b2a;
+            --text-muted: #6e6a68;
+            --accent-sage: #8fa89b;
+            --border-light: #e8e6e3;
+            --card-bg: #ffffff;
+            --hover-dark: #423f3e;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Skip to Content Link for Accessibility */
+        .skip-to-content {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--text-main);
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 100;
+        }
+
+        .skip-to-content:focus {
+            top: 0;
+        }
+
+        /* Header Navigation */
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-light);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-main);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .logo:hover {
+            color: var(--accent-sage);
+        }
+
+        .logo span {
+            color: var(--accent-sage);
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-main);
+        }
+
+        nav {
+            display: flex;
+            gap: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-muted);
+            margin-left: 2rem;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--text-main);
+        }
+
+        nav a:focus {
+            outline: 2px solid var(--accent-sage);
+            outline-offset: 4px;
+        }
+
+        /* Hero Banner Section */
+        .hero {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .hero-banner {
+            background: linear-gradient(135deg, #f3f1ed 0%, #ede9e3 100%);
+            border-radius: 12px;
+            padding: 5rem 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 400px;
+            border: 1px solid var(--border-light);
+        }
+
+        .hero-label {
+            color: var(--accent-sage);
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+            font-size: 0.85rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            max-width: 600px;
+            font-weight: 600;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            max-width: 500px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--text-main);
+            color: #ffffff;
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: transform 0.2s ease, background-color 0.3s ease;
+            border: 2px solid var(--text-main);
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--hover-dark);
+            border-color: var(--hover-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn:focus {
+            outline: 2px solid var(--accent-sage);
+            outline-offset: 2px;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--text-main);
+            border: 2px solid var(--text-main);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--text-main);
+            color: #ffffff;
+        }
+
+        /* Products Show Grid Section */
+        .products-section {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--accent-sage);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        .product-card:focus-within {
+            box-shadow: 0 0 0 3px var(--accent-sage);
+        }
+
+        .product-image-placeholder {
+            background: linear-gradient(135deg, #f5f4f0 0%, #ede9e3 100%);
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #a39f9c;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .product-info {
+            padding: 1.5rem;
+        }
+
+        .product-category {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent-sage);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-price {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 1rem;
+        }
+
+        .product-btn {
+            width: 100%;
+            padding: 0.6rem 1rem;
+            background-color: var(--accent-sage);
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .product-btn:hover {
+            background-color: #7a9186;
+        }
+
+        .product-btn:focus {
+            outline: 2px solid var(--text-main);
+            outline-offset: 2px;
+        }
+
+        /* About Section */
+        .about-section {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            border: 1px solid var(--border-light);
+            padding: 3rem;
+        }
+
+        .about-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .about-section p {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-main);
+            color: #f5f4f0;
+            padding: 3rem 2rem;
+            margin-top: 6rem;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1rem;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: #a39f9c;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-sage);
+        }
+
+        .footer-section a:focus {
+            outline: 2px solid var(--accent-sage);
+            outline-offset: 2px;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-bottom p {
+            font-size: 0.85rem;
+            color: #a39f9c;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            color: #a39f9c;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-sage);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: block;
+            }
+
+            nav {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: var(--card-bg);
+                flex-direction: column;
+                gap: 0;
+                padding: 1rem;
+                border-bottom: 1px solid var(--border-light);
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+            }
+
+            nav.active {
+                max-height: 300px;
+            }
+
+            nav a {
+                margin: 0.5rem 0;
+                margin-left: 0;
+                display: block;
+            }
+
+            .nav-container {
+                flex-wrap: wrap;
+                position: relative;
+            }
+
+            .hero-banner {
+                padding: 3rem 2rem;
+                min-height: 300px;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .about-section {
+                padding: 2rem;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .section-title {
+                font-size: 1.2rem;
+            }
+
+            .hero-banner {
+                padding: 2rem 1.5rem;
+            }
+
+            .products-section {
+                padding: 0 1rem;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Skip to Content Link -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <!-- Header Navigation Bar -->
+    <header>
+        <div class="nav-container">
+            <a href="#home" class="logo">LUJAY<span>.STORE</span></a>
+            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" onclick="toggleMenu()">☰</button>
+            <nav aria-label="Main navigation">
+                <a href="#home">Home</a>
+                <a href="#shop">Shop</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Hero Banner Section -->
+    <section class="hero" id="home">
+        <div class="hero-banner">
+            <span class="hero-label">New Arrival Collection</span>
+            <h1>Refined Essentials for Modern Spaces</h1>
+            <p>Carefully selected items built with aesthetic longevity, pure simplicity, and functional beauty in mind.</p>
+            <a href="#shop" class="btn">Explore Collection</a>
+        </div>
+    </section>
+
+    <!-- Curated Products Showcase Section -->
+    <section class="products-section" id="shop">
+        <h2 class="section-title">Curated Essentials</h2>
+        <div class="grid">
+            
+            <!-- Product Item 1 -->
+            <div class="product-card">
+                <div class="product-image-placeholder">Premium Minimalist Item</div>
+                <div class="product-info">
+                    <div class="product-category">Home Decor</div>
+                    <h3 class="product-name">Sleek Structural Vase</h3>
+                    <div class="product-price">$45.00</div>
+                    <button class="product-btn" aria-label="Add Sleek Structural Vase to cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product Item 2 -->
+            <div class="product-card">
+                <div class="product-image-placeholder">Aesthetic Texture Item</div>
+                <div class="product-info">
+                    <div class="product-category">Textiles</div>
+                    <h3 class="product-name">Soft Woven Linen Blanket</h3>
+                    <div class="product-price">$85.00</div>
+                    <button class="product-btn" aria-label="Add Soft Woven Linen Blanket to cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product Item 3 -->
+            <div class="product-card">
+                <div class="product-image-placeholder">Organized Living Item</div>
+                <div class="product-info">
+                    <div class="product-category">Workspace</div>
+                    <h3 class="product-name">Desktop Organizer Set</h3>
+                    <div class="product-price">$60.00</div>
+                    <button class="product-btn" aria-label="Add Desktop Organizer Set to cart">Add to Cart</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <h2>About Lujay Store</h2>
+        <p>At Lujay Store, we believe that quality design and functionality should go hand in hand. Our carefully curated collection brings together the finest lifestyle products and modern essentials that elevate everyday living.</p>
+        <p>Every item in our store is selected with meticulous attention to detail, ensuring that you receive only the best in terms of craftsmanship, aesthetic appeal, and durability.</p>
+    </section>
+
+    <!-- Footer Area -->
+    <footer id="contact">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p style="font-size: 0.9rem; color: #a39f9c; line-height: 1.6;">Premium curated lifestyle products designed for modern spaces. Quality, simplicity, and functional beauty.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Customer Support</h3>
+                <ul>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook</a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Lujay Store. All rights reserved. | <a href="#" style="color: #a39f9c; text-decoration: none;">Privacy Policy</a></p>
+            <p style="font-size: 0.85rem; color: #a39f9c;">Designed for optimal indexing on Google and modern web standards.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            const toggle = document.querySelector('.nav-toggle');
+            nav.classList.toggle('active');
+            toggle.setAttribute('aria-expanded', nav.classList.contains('active'));
+        }
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('nav').classList.remove('active');
+                document.querySelector('.nav-toggle').setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            const nav = document.querySelector('nav');
+            const toggle = document.querySelector('.nav-toggle');
+            if (!e.target.closest('nav') && !e.target.closest('.nav-toggle')) {
+                nav.classList.remove('active');
+                toggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    </script>
+
+</body>
+</html>
